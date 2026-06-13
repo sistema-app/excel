@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Insumos para mis clases de Excel</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        float: 'float 12s ease-in-out infinite',
+                        pulseSlow: 'pulse 6s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%,100%': {
+                                transform: 'translateY(0px) rotate(0deg)'
+                            },
+                            '50%': {
+                                transform: 'translateY(-40px) rotate(12deg)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            overflow-x: hidden;
+            background: #020617;
+        }
+
+        .glass {
+            backdrop-filter: blur(20px);
+            background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.08);
+        }
+
+        .floating {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            opacity: .18;
+            font-size: 2rem;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                #22c55e,
+                #06b6d4,
+                #60a5fa
+            );
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+</head>
+
+<body class="text-white min-h-screen">
+
+    <!-- Fondo -->
+    <div class="fixed inset-0 -z-10">
+
+        <div class="absolute inset-0 bg-slate-950"></div>
+
+        <div class="absolute top-0 left-0 w-96 h-96 bg-green-500 rounded-full blur-[150px] opacity-20"></div>
+
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500 rounded-full blur-[150px] opacity-20"></div>
+
+        <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full blur-[180px] opacity-10"></div>
+
+    </div>
+
+    <!-- Emojis flotantes -->
+    <div id="floating-emojis"></div>
+
+    <!-- HERO -->
+    <section class="relative z-10">
+
+        <div class="container mx-auto px-6 py-24 text-center">
+
+            <div
+                class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-500/10 border border-green-400/20 mb-8">
+
+                📊 Recursos para Excel
+            </div>
+
+            <h1
+                class="text-5xl md:text-7xl font-black leading-tight gradient-text">
+
+                Insumos para mis clases de Excel
+
+            </h1>
+
+            <p
+                class="mt-8 max-w-3xl mx-auto text-slate-300 text-lg md:text-xl">
+
+                Descarga ejercicios, insumos y material complementario para fortalecer tus
+                habilidades en Excel.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ARCHIVOS -->
+    <section class="relative z-10 pb-24">
+
+        <div class="container mx-auto px-6">
+
+            <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+                <!-- Archivo -->
+                <div
+                    class="glass rounded-3xl p-8 transition-all duration-300 card-hover">
+
+                    <div class="text-6xl mb-5">
+                        📗
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-3">
+                        Funciones diversas e introduccorias al mundo de Excel
+                    </h3>
+
+                    <p class="text-slate-300 mb-6">
+                        Fórmulas esenciales para comenzar con Excel.
+                    </p>
+
+                    <a
+                        href="Formulas varios.xlsx"
+                        download
+                        class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 hover:scale-105 transition">
+
+                        ⬇ Descargar
+
+                    </a>
+
+                </div>
+
+                <!-- Archivo -->
+                <div
+                    class="glass rounded-3xl p-8 transition-all duration-300 card-hover">
+
+                    <div class="text-6xl mb-5">
+                        📊
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-3">
+                        Función SI
+                    </h3>
+
+                    <p class="text-slate-300 mb-6">
+                        Ejercicios prácticos aplicando condiciones
+                    </p>
+
+                    <a
+                        href="Formulas varios.xlsx"
+                        download
+                        class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-105 transition">
+
+                        ⬇ Descargar
+
+                    </a>
+
+                </div>
+
+                <!-- Archivo -->
+                <div
+                    class="glass rounded-3xl p-8 transition-all duration-300 card-hover">
+
+                    <div class="text-6xl mb-5">
+                        📈
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-3">
+                        Datos y más datos
+                    </h3>
+
+                    <p class="text-slate-300 mb-6">
+                        Datos para practicar excel
+                    </p>
+
+                    <a
+                        href="Empleados.xlsx"
+                        download
+                        class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:scale-105 transition">
+
+                        ⬇ Descargar
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative z-10 text-center pb-10">
+
+        <div class="text-4xl mb-4">
+            💻 📊 🤖 📈 📚 🖥️
+        </div>
+
+        <p class="text-slate-400">
+            Material de apoyo para estudiantes de Excel
+        </p>
+
+    </footer>
+
+    <script>
+
+        const emojis = [
+            "💻", "🖥️", "📊", "📈", "📉",
+            "🤖", "📚", "⚡", "🧮",
+            "💾", "⌨️", "🖱️", "📋"
+        ];
+
+        const container = document.getElementById('floating-emojis');
+
+        for (let i = 0; i < 40; i++) {
+
+            const emoji = document.createElement('div');
+
+            emoji.className = 'floating';
+
+            emoji.innerHTML =
+                emojis[Math.floor(Math.random() * emojis.length)];
+
+            emoji.style.left = Math.random() * 100 + 'vw';
+
+            emoji.style.top = Math.random() * 100 + 'vh';
+
+            emoji.style.animation =
+                `float ${8 + Math.random() * 12}s ease-in-out infinite`;
+
+            emoji.style.animationDelay =
+                `${Math.random() * 10}s`;
+
+            container.appendChild(emoji);
+        }
+
+    </script>
+
+</body>
+
+</html>
